@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/style_credenciales.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<title>INGRESO A CITAS VIRTUALES</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class = "col-sm-2" id="logo-consultorio">
+                <img src="/img/logo_consultorio.jpeg" class="img-fluid rounded float-start" alt="Imagen en la esquina">
+            </div>
+            <div class = "col-sm-7" id="parrafo.head" >
+                <h1 class = "display-5">CONSULTORIO MEDICO DE ESPECIALISTAS</h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 container text-center" >
+           <form>    
+            <h4 class = "title">INGRESO A CITAS VIRTUALES</h4>
+            <div calss = "mb-3">
+                <input class="controls" type="email" name="USUARIO" id="USUARIO" placeholder="INGRESE SU USU@RIO">
+            </div>
+            <input class="controls" type="password" name="PASSWORD" id="PASSWORD" placeholder="INGRESE SU CONTRASEÑA">
+            <input class="botons" id="INGRESAR" type="submit" value="INGRESAR">
+                    <P> Recuerde ingresar con el usuario del paciente</P>
+                    <P>Si no tiene usuario puede registrarse haciendo clic <a href="PACIENTE-NUEVO.html">aquí</a></P>
+                    <p>Olvidó su clave? Haga clic <a href="#">aquí</a></p>
+                    <P>Para la Guía de usuario haga clic <a href="#">aquí</a></P>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+|   </div>
+
+    <script>
+        document.getElementById('INGRESAR').addEventListener('click', function() {
+            window.location.href = 'ppal-aplicativo.html'; 
+           });
+    </script>
+</body>
+</html>

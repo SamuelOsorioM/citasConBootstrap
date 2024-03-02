@@ -1,0 +1,75 @@
+.col-sm-7 h1 {
+    color: hotpink;
+}
+
+.menu {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+
+.menu li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: blueviolet;
+    display: block;
+}
+
+
+
+#a-menu {
+    text-decoration: none;
+    color: blueviolet;
+    display: block;
+}
+
+hr{
+    border: 3px solid;
+    margin: 1px 0;
+    height: 1px;
+}
+
+.mas-cerca-deti {
+    width: 100%;
+}
+
+.mas-cerca-deti img {
+    width: 100%;
+    height: auto;
+}
+
+.INF-CONTACTO {
+    background-color: mediumturquoise;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1px;
+
+}
+
+.columna {
+flex: flex;
+flex-wrap: wrap;
+padding: px;
+line-height: .3;
+font-size: smaller;
+}
+
+body {
+    background-image: url('/img/FONDO.png');
+    background-size: cover;
+}
+
+#columna{
+    padding: 10PX;
+    margin: 5px;
+}

@@ -1,0 +1,105 @@
+body {
+    background-image: url('FONDO.png');
+    background-size: cover;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1px;
+}
+
+.logo-consultorio img{
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: auto;
+    margin-right: 10px;       
+}
+
+.TITULOS-APP {
+    flex: 1;
+    font-size: 50 px;
+    color: hotpink;
+    display: block;
+
+}
+
+.menu-app {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-app li {
+    flex: 1;
+    text-align: center;
+    ;
+}
+
+.menu-app li a {
+    text-decoration: none;
+    color: blueviolet;
+    display: block;
+    
+}
+
+hr{
+    border: 3px solid;
+    margin: 1px 0;
+    height: 1px;
+}
+
+.titulo-app {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.box-cita-nueva {
+    background-color: #d1527c;
+    text-align: center; 
+    padding: 2px; 
+    border-radius: 50px;
+}
+
+.box-cita-nueva h4 {
+    color: #fff;
+    font-size: 15px;
+}
+
+
+.confirmacioncitamedica {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.caja-confirmacioncitamedica {
+    background-color: rgb(245, 247, 246);
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 30px;
+}
+
+.caja-confirmacioncitamedica p {
+    color: deeppink;
+    font-size: 25px;
+}
+
+.guardar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/style_NUEVA_CITA.css">
+<title>PACIENTE-NUEVO</title>
+</head>
+<body>
+<div class="head">    
+    <div class="logo-consultorio">
+        <img src="/img/logo_consultorio.jpeg" alt="Imagen en la esquina">
+    </div>
+    <div class="TITULOS-APP">   
+        <h1>CONSULTORIO MEDICO DE ESPECIALISTAS</h1>
+        <h2>SISTEMA VIRTUAL DE CITAS</h2>
+    </div>
+</div>
+   
+    <header>
+        <nav>
+       
+            <hr>
+        </nav>
+        <div class="titulo-app">  
+            <div class="box-cita-nueva">
+                <H4>CREAR PACIENTE NUEVO</H4>
+            </div>
+         </div>
+        
+    </header>
+
+<form 
+action="/php/controladores/validarInsertarPaciente.php" 
+method="post" 
+enctype="text/plain" 
+class="formulario">
+    <div class="columna">
+        <div class="formulario-bloque">
+        
+            <div class="pregunta">
+                <p>Cedula paciente</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text"name="cedulaPaciente" id="cedulaPaciente" placeholder="Ingrese su numero de identificacion" required> 
+            </div>
+            
+            <div class="pregunta">
+                <p>Primer Nombre</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="primerNombrePaciente" id="primerNombrePaciente" placeholder="Ingrese su primer nombre" required>
+            </div>
+            
+            <div class="pregunta">
+                <p>Segundo nombre</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="segundoNombrePaciente" id="segundoNombrePaciente" placeholder="Ingrese su segundo nombre, si tiene.">
+            </div>
+            
+            <div class="pregunta">
+                <p>Primer Apellido</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="primerApellidoPaciente" id="primerApellidoPaciente" placeholder="Ingrese su primer Apellido." required>
+            </div>
+
+            <div class="pregunta">
+                <p>Segundo Apellido</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="segundoApellidoPaciente" id="segundoApellidoPaciente" placeholder="Ingrese su segundo Apellido.">
+            </div>
+            
+            <div class="pregunta">
+                <p>Direccion</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="direccionPaciente" id="direccionPaciente" placeholder="Ingrese su direccion completa" required>
+            </div>            
+        </div>
+    </div>
+
+    <div class="columna">
+        <div class="formulario-bloque">
+            <div class="pregunta">
+                <p>Telefono Celular</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="telefonoCelularPaciente" id="telefonoCelularPaciente" placeholder="Ingrese su numero de Telefono Celular." required>
+            </div>
+            
+            <div class="pregunta">
+                <p>Telefono Convencional</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="telefonoConvencionalPaciente" id="telefonoConvencionalPaciente" placeholder="Ingrese su numero de Telefono Convencional" required>
+            </div>
+            
+            <div class="pregunta">
+                <p>Fecha de Nacimiento</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="date" name="fechaDeNacimientoPaciente" id="fechaDeNacimientoPaciente" placeholder="Ingrese su fecha de Nacimiento" required>
+            </div>
+            
+            <div class="pregunta">
+                <p>Correo Electronico</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="email" name="correoElectronicoPaciente" id="correoElectronicoPaciente" placeholder="Ingrese su correo electronico" required>
+            </div>
+            
+            <div class="pregunta">
+                <p>Sexo</p>
+            </div>
+            
+            <div class="respuesta">
+                <select type="email" name="sexoPaciente" id="sexoPaciente" placeholder="Ingrese el sexo con que nació" required>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <p>Pasword</p>
+            </div>
+            
+            <div class="respuesta">
+                <Input type="PASSWORD" name="password" id="password" placeholder="Ingrese su pasword." required>
+            </div>
+        </div>
+    </div>
+</form>
+
+      <button type="submit" class="guardar"><a href="CONFIRMACION-PACIENTE-NUEVO.html">CREAR PACIENTE NUEVO</a></button>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>

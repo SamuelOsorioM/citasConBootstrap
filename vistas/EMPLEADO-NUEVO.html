@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/style_NUEVA_CITA.css">
+<title>EMPLEADO-NUEVO</title>
+</head>
+<body>
+<div class="head">    
+    <div class="logo-consultorio">
+        <img src="iimg/logo_consultorio.jpeg" alt="Imagen en la esquina">
+    </div>
+    <div class="TITULOS-APP">   
+        <h1>CONSULTORIO MEDICO DE ESPECIALISTAS</h1>
+        <h2>SISTEMA VIRTUAL DE CITAS</h2>
+    </div>
+</div>
+   
+    <header>
+        <nav>
+            <label for="show-menu" class="show-menu">MENU</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul class="menu-app" id="menu">
+                <li><a href="NUEVA-CITA.html">NUEVA CITA</a></li>
+                <li><a href="ANULAR CITA.html">ANULAR CITA</a></li>
+                <li><a href="ATENCION-MEDICA.html">ATENCION MEDICA</a></li>
+                    <li>
+                        <a href="#">MAESTROS</a>
+                        <ul class="submenu"> 
+                            <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                            <li><a href="NUEVO-CONUSULTORIO.html">NUEVO CONSULTORIO</a></li>
+                            <li><a href="NUEVO-MEDICAMENTO.html">NUEVO MEDICAMENTO</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">CONSULTAS</a>
+                        <ul class="submenu" > 
+                            <li><a href="#">CONSULTA EMPLEADOS</a></li>
+                            <li><a href="#">CONSULTA CONSULTORIOS</a></li>
+                            <li><a href="#">CONSULTA MEDICAMENTOS</a></li>
+                        </ul>
+                    </li>
+                <li><a href="/index.html">SALIR</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <div class="titulo-app">  
+            <div class="box-cita-nueva">
+            <H4>CREAR NUEVO EMPLEADO</H4>
+            </div>
+         </div>
+        
+    </header>
+
+<form class="formulario">
+    <div class="columna">
+        <div class="formulario-bloque">
+        
+            <div class="pregunta">
+                <p>Tipo de Identificacion</p>
+            </div>
+           
+            <div class="respuesta">
+                <select name="tipo-identificacion">
+                <option value="CEDULA">Cedula</option>
+                <option value="TARJETA DE IDENTIDAD">Tarjeta de Identidad</option>
+                <option value="REGISTRO CIVIL">Registro Civil</option>
+                <option value="PASAPORTE">Pasaporte</option>
+                </select>
+            </div>
+           
+            <div class="pregunta">
+                <p>Identificacion</p>
+            </div>
+           
+            <div class="respuesta">
+                <input type="text" name="Identifiacion empleado">
+            </div>
+           
+            <div class="pregunta">
+                <p>Fecha de nacimiento</p>
+            </div>
+           
+            <div class="respuesta">
+                <input type="date" name="fecha nacimiento">
+            </div>
+           
+            <div class="pregunta">
+                <p>Domicilio</p>
+            </div>
+           
+            <div class="respuesta">
+                <input type="text" name="domicilio">
+            </div>
+           
+            <div class="pregunta">
+                <p>Ciudad</p>
+            </div>
+           
+            <div class="respuesta">
+                <select name="Ciudad">
+                    <option value="Medellin">Medellin</option>
+                    <option value="Bogota">Bogota</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                </select>
+            </div>
+           
+            <div class="pregunta">
+                <p>Rol empleado</p>
+            </div>
+           
+            <div class="respuesta">
+                <select name="Rol empleado">
+                    <option value="Medico General">Medico General</option>
+                    <option value="Internista">Internista</option>
+                    <option value="Pediatra">Pediatra</option>
+                    <option value="Cardiologo">Cardiologo</option>
+                    <option value="Secretaría">Secretaría</option>
+                    <option value="Auxiliar Bodega Medicamentos">Auxiliar Bodega Medicamentos</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="columna">
+        <div class="formulario-bloque">
+            <div class="pregunta">
+                <p>Nombre Completo</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="Nombre Completo">
+            </div>
+            
+            <div class="pregunta">
+                <p>Telefono</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="Telefono">
+            </div>
+            
+            <div class="pregunta">
+                <p>Correo Electrónico</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="email" name="Correo Electrónico">
+            </div>
+            
+            <div class="pregunta">
+                <p>Telefono Domicilio</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="Telefono Domicilio">
+            </div>
+            
+            <div class="pregunta">
+                <p>Tipo de contrato</p>
+            </div>
+            
+            <div class="respuesta">
+                <select name="Tipo Contrato">
+                    <option value="Honorarios">Honorarios</option>
+                    <option value="Servicios">Servicios</option>
+                    <option value="Laboral Indeterminado">Laboral Indeterminado</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+
+</form>
+      <button type="submit" class="guardar"><a href="CONFIRMACION-EMPLEADO-NUEVO.html">CREAR NUEVO EMPLEADO</a></button>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>

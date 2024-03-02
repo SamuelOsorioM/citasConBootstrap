@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/style_NUEVA_CITA.css">
+<title>ANULAR-CITA</title>
+</head>
+<body>
+<div class="head">    
+    <div class="logo-consultorio">
+        <img src="/img/logo_consultorio.jpeg"   alt="Imagen en la esquina">
+    </div>
+    <div class="TITULOS-APP">   
+        <h1>CONSULTORIO MEDICO DE ESPECIALISTAS</h1>
+        <h2>SISTEMA VIRTUAL DE CITAS</h2>
+    </div>
+</div>
+   
+    <header>
+        <nav>
+            <label for="show-menu" class="show-menu">MENU</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul class="menu-app" id="menu">
+                <li><a href="NUEVA-CITA.html">NUEVA CITA</a></li>
+                <li><a href="ANULAR CITA.html">ANULAR CITA</a></li>
+                <li><a href="ATENCION-MEDICA.html">ATENCION MEDICA</a></li>
+                    <li>
+                        <a href="#">MAESTROS</a>
+                        <ul class="submenu"> 
+                            <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                            <li><a href="NUEVO-CONUSULTORIO.html">NUEVO CONSULTORIO</a></li>
+                            <li><a href="NUEVO-MEDICAMENTO.html">NUEVO MEDICAMENTO</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">CONSULTAS</a>
+                        <ul class="submenu" > 
+                            <li><a href="#">CONSULTA EMPLEADOS</a></li>
+                            <li><a href="#">CONSULTA CONSULTORIOS</a></li>
+                            <li><a href="#">CONSULTA MEDICAMENTOS</a></li>
+                        </ul>
+                    </li>
+                <li><a href="/index.html">SALIR</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <div class="titulo-app">  
+            <div class="box-cita-nueva">
+            <H4>ANULAR CITA MEDICA</H4>
+            </div>
+         </div>
+        
+    </header>
+
+<form class="formulario">
+    <div class="columna">
+        <div class="formulario-bloque">
+        
+            <div class="pregunta">
+                <p>Tipo de Identificacion</p>
+            </div>
+            <div class="respuesta">
+                <input type="text" name="tipoIdentificacion" placeholder="Tipo de identificacion">
+            </div>
+            <div class="pregunta">
+                <p>Identificacion</p>
+            </div>
+            <div class="respuesta">
+                <input type="text" name="identificacion" placeholder="Identificacion">
+            </div>
+            <div class="pregunta">
+                <p>Especialidad</p>
+            </div>
+            <div class="respuesta">
+                <select name="Especialidad" class="desplegableEspecialidad">
+                <option value="Medico General">Medico General</option>
+                <option value="Internista">Internista</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Cardiologo">Cardiologo</option>
+                </select>
+
+            </div>
+            <div class="pregunta">
+                <p>Seleccione Fecha</p>
+            </div>
+            <div class="respuesta">
+                <input type="date" name="fecha" placeholder="Fecha">
+            </div>
+            <div class="pregunta">
+                <p>Seleccione Hora de atencion</p>
+            </div>
+            <div class="hora">
+                <input type="time" name="hora" placeholder="Hora">
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="columna">
+        <div class="formulario-bloque">
+                <div class="pregunta">
+                <p>Nombre Completo</p>
+            </div>
+            <div class="respuesta">
+                <input type="text" name="Nombre Completo" placeholder="Nombre Completo">
+            </div>
+            <div class="pregunta">
+                <p>Telefono</p>
+            </div>
+            <div class="respuesta">
+                <input type="text" name="Telefono" placeholder="Telefono">
+            </div>
+            <div class="pregunta">
+                <p>Correo Electrónico</p>
+            </div>
+            <div class="respuesta">
+                <input type="email" name="Correo Electrónico" placeholder="Correo Electronico">
+            </div>
+            <div class="pregunta">
+                <p>Nombre Del Especialista</p>
+            </div>
+            <div class="respuesta">
+                <input type="text" name="Nombre Del Especialista" placeholder="Especialista">
+            </div>
+            
+        </div>
+    </div>
+
+</form>
+      <button type="submit" class="guardar"><a href="CONFIRMACION-ANULACION-CITAMEDICA.html">ANULAR CITA MEDICA</a></button>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>
