@@ -20,7 +20,7 @@ $nuevoPaciente->crearPaciente($_POST['cedulaPaciente'],
 $resultado=$nuevoPaciente->agregarPaciente();
 
 if($resultado)
-    header("location:../vistas/CONFIRMACION-EMPLEADO-NUEVO.html");
+    header("location:../vistas/CONFIRMACION-PACIENTE-NUEVO.html");
 else
     header("location:../vistas/CONFIRMACION-noSeCreoPaciente.html");
 
