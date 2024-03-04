@@ -4,7 +4,7 @@ extract($_POST);
 require"/php/controladores/conectarBaseDatos.php";
 require"/php/clases/claseEmpleados.php";
 
-//$nuevoPaciente=New Pacientes();
+$nuevoEmpleado=New Empleados();
 //$nuevoPaciente->crearPaciente($_POST['cedulaPaciente'],
   //                              $_POST['primerNombrePaciente'],
     //                            $_POST['segundoNombrePaciente'],

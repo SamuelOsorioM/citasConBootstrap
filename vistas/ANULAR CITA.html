@@ -29,9 +29,20 @@
                     <li>
                         <a href="#">MAESTROS</a>
                         <ul class="submenu"> 
-                            <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                            <li><a href="PACIENTE-NUEVO.html">NUEVO PACIENTE</a></li>
+                            <li><a href="NUEVA-CITA.html">NUEVA CITA MEDICA</a></li>
                             <li><a href="NUEVO-CONUSULTORIO.html">NUEVO CONSULTORIO</a></li>
                             <li><a href="NUEVO-MEDICAMENTO.html">NUEVO MEDICAMENTO</a></li>
+                                <li>
+                                    <a href="#">--GESTION EMPLEADOS--</a>
+                                    <ul class="submenu">
+                                    <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                                    <li><a href="NUEVO-CARGO-EMPLEADOS.html">NUEVO CARGO/EMPLEADO</a></li>
+                                    <li><a href="NUEVO-TIPO-CONTRATO.html">NUEVO TIPO CONTRATO/EMPLEADO</a></li>
+                                    <li><a href="NUEVO-ROL-EMPLEADO-SOFTWARE.html">NUEVO ROL EN SOFTWARE</a></li>
+                                    
+                                    </ul>
+                                </li>
                         </ul>
                     </li>
                     <li>
@@ -74,14 +85,14 @@
                 <p>Especialidad</p>
             </div>
             <div class="respuesta">
-                <select name="Especialidad" class="desplegableEspecialidad">
+                <select name="Especialidad" for="Especialidad Medica"  class="desplegableEspecialidad" id="Especialidad Medica" placeholder="Especialidad Medica">
                 <option value="Medico General">Medico General</option>
                 <option value="Internista">Internista</option>
                 <option value="Pediatra">Pediatra</option>
                 <option value="Cardiologo">Cardiologo</option>
                 </select>
-
             </div>
+
             <div class="pregunta">
                 <p>Seleccione Fecha</p>
             </div>
@@ -131,7 +142,9 @@
     </div>
 
 </form>
-      <button type="submit" class="guardar"><a href="CONFIRMACION-ANULACION-CITAMEDICA.html">ANULAR CITA MEDICA</a></button>
+      <button type="submit" class="guardar">
+        <a href="CONFIRMACION-ANULACION-CITAMEDICA.html">ANULAR CITA MEDICA</a>
+    </button>
 
 
 

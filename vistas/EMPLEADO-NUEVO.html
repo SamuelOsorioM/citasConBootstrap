@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/styles/style_NUEVA_CITA.css">
 <title>EMPLEADO-NUEVO</title>
@@ -10,7 +10,7 @@
 <body>
 <div class="head">    
     <div class="logo-consultorio">
-        <img src="iimg/logo_consultorio.jpeg" alt="Imagen en la esquina">
+        <img src="img/logo_consultorio.jpeg" alt="Imagen en la esquina">
     </div>
     <div class="TITULOS-APP">   
         <h1>CONSULTORIO MEDICO DE ESPECIALISTAS</h1>
@@ -29,9 +29,20 @@
                     <li>
                         <a href="#">MAESTROS</a>
                         <ul class="submenu"> 
-                            <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                            <li><a href="PACIENTE-NUEVO.html">NUEVO PACIENTE</a></li>
+                            <li><a href="NUEVA-CITA.html">NUEVA CITA MEDICA</a></li>
                             <li><a href="NUEVO-CONUSULTORIO.html">NUEVO CONSULTORIO</a></li>
                             <li><a href="NUEVO-MEDICAMENTO.html">NUEVO MEDICAMENTO</a></li>
+                                <li>
+                                    <a href="#">--GESTION EMPLEADOS--</a>
+                                    <ul class="submenu">
+                                    <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                                    <li><a href="NUEVO-CARGO-EMPLEADOS.html">NUEVO CARGO/EMPLEADO</a></li>
+                                    <li><a href="NUEVO-TIPO-CONTRATO.html">NUEVO TIPO CONTRATO/EMPLEADO</a></li>
+                                    <li><a href="NUEVO-ROL-EMPLEADO-SOFTWARE.html">NUEVO ROL EN SOFTWARE</a></li>
+                                    
+                                    </ul>
+                                </li>
                         </ul>
                     </li>
                     <li>
@@ -42,7 +53,7 @@
                             <li><a href="#">CONSULTA MEDICAMENTOS</a></li>
                         </ul>
                     </li>
-                <li><a href="/index.html">SALIR</a></li>
+                <li><a href="/index.html">SALIR</a></li>    
             </ul>
             <hr>
         </nav>
@@ -54,7 +65,11 @@
         
     </header>
 
-<form class="formulario">
+<form 
+action="/php/controladores/validarInsertarEmpleado.php"
+method="post"
+enctype="text/plan"
+class="formulario">
     <div class="columna">
         <div class="formulario-bloque">
         
@@ -63,7 +78,7 @@
             </div>
            
             <div class="respuesta">
-                <select name="tipo-identificacion">
+                <select name="tipo-identificacion" name="tipoIdentificacionEmpleado" id="tipoIdentificacionEmpleado">
                 <option value="CEDULA">Cedula</option>
                 <option value="TARJETA DE IDENTIDAD">Tarjeta de Identidad</option>
                 <option value="REGISTRO CIVIL">Registro Civil</option>
@@ -76,100 +91,113 @@
             </div>
            
             <div class="respuesta">
-                <input type="text" name="Identifiacion empleado">
+                <input type="text" name="cedulaEmpleados" id="cedulaEmpleados" placeholder="Ingrese su identificacion" required>
             </div>
            
             <div class="pregunta">
-                <p>Fecha de nacimiento</p>
+                <p>Primer Nombre</p>
             </div>
            
             <div class="respuesta">
-                <input type="date" name="fecha nacimiento">
+                <input type="text" name="primerNombreEmpleado" id="primerNombreEmpleado" required>
             </div>
            
             <div class="pregunta">
-                <p>Domicilio</p>
+                <p>Segundo Nombre</p>
             </div>
            
             <div class="respuesta">
-                <input type="text" name="domicilio">
+                <input type="text" name="segundoNombreEmpleado" id="segundoNombreEmpleado" required>
             </div>
            
             <div class="pregunta">
-                <p>Ciudad</p>
+                <p>Primer Apellido</p>
             </div>
            
             <div class="respuesta">
-                <select name="Ciudad">
-                    <option value="Medellin">Medellin</option>
-                    <option value="Bogota">Bogota</option>
-                    <option value="Cali">Cali</option>
-                    <option value="Barranquilla">Barranquilla</option>
-                </select>
+                <input type="text" name="primerApellidoEmpleado" id="primerApellidoEmpleado" required>
             </div>
            
             <div class="pregunta">
-                <p>Rol empleado</p>
+                <p>Segundo Apellido</p>
             </div>
            
             <div class="respuesta">
-                <select name="Rol empleado">
-                    <option value="Medico General">Medico General</option>
-                    <option value="Internista">Internista</option>
-                    <option value="Pediatra">Pediatra</option>
-                    <option value="Cardiologo">Cardiologo</option>
-                    <option value="Secretaría">Secretaría</option>
-                    <option value="Auxiliar Bodega Medicamentos">Auxiliar Bodega Medicamentos</option>
-                </select>
+                <div class="respuesta">
+                    <input type="text" name="SegundoApellidoEmpleado" id="SegundoApellidoEmpleado" required>
+                </div>
+            </div>
+            
+            <div class="pregunta">
+                <p>Direccion</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="direccionEmpleado" id="direccionEmpleado" required>
             </div>
         </div>
     </div>
 
     <div class="columna">
         <div class="formulario-bloque">
+            
             <div class="pregunta">
-                <p>Nombre Completo</p>
+                <p>Correo Electronico</p>
             </div>
             
             <div class="respuesta">
-                <input type="text" name="Nombre Completo">
+                <input type="email" name="correoElectronicoEmpleado" id="correoElectronicoEmpleado" required>
             </div>
             
             <div class="pregunta">
-                <p>Telefono</p>
+                <p>Telefono Celular</p>
             </div>
             
             <div class="respuesta">
-                <input type="text" name="Telefono">
+                <input type="text" name="telefonoCelularEmpleado" required>
             </div>
             
             <div class="pregunta">
-                <p>Correo Electrónico</p>
+                <p>Cargo empleado</p>
             </div>
             
             <div class="respuesta">
-                <input type="email" name="Correo Electrónico">
+                <input type="text" name="idCargoEmpleado" required>
             </div>
             
             <div class="pregunta">
-                <p>Telefono Domicilio</p>
+                <p>Especialidad Medica</p>
             </div>
             
             <div class="respuesta">
-                <input type="text" name="Telefono Domicilio">
+                <input type="text" name="idEspecialidadMedica" id="idEspecialidadMedica" required>
             </div>
-            
+
             <div class="pregunta">
-                <p>Tipo de contrato</p>
+                <p>tipo de Contrato</p>
             </div>
             
             <div class="respuesta">
-                <select name="Tipo Contrato">
-                    <option value="Honorarios">Honorarios</option>
-                    <option value="Servicios">Servicios</option>
-                    <option value="Laboral Indeterminado">Laboral Indeterminado</option>
-                    </select>
+                <input type="text" name="idTipoDeContrato" id="idTipoDeContrato" required>
             </div>
+
+            <div class="pregunta">
+                <p>Rol Empleado Software</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="idRolEmpleadoEnSoftware" id="idRolEmpleadoEnSoftware" required>
+            </div>
+
+            <div class="pregunta">
+                <p>Password</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="passwordEmpleado" id="passwordEmpleado" required>
+            </div>
+
+
         </div>
     </div>
 
