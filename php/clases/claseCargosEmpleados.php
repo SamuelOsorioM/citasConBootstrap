@@ -49,10 +49,10 @@ class CargosEmpleados
     public function agregarCargoEmpleado()
     {
        $this->Conexion=conectarBaseDatos();
-       $sentenciaSQL="insert into cargos_emplados(
+       $sentenciaSQL="INSERT INTO cargos_emplados(
                             ID CARGOS,
                             CARGO EMPLEADO)
-                    values(
+                    VALUES(
                         '$this->idCargoEmpleado';
                         '$this->cargoEmpleado')";
         $resultado=$this->Conexion->query($sentenciaSQL);
@@ -63,7 +63,7 @@ class CargosEmpleados
     public function consultarCargoEmpleado($idCargoEmpleado)
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="select * from cargos_emplados where ID CARGOS = '$idCargoEmpleado'";
+        $sentenciaSQL="SELECT * FROM cargos_emplados WHERE ID CARGOS = '$idCargoEmpleado'";
         $resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -72,9 +72,9 @@ class CargosEmpleados
     public function actualizarCargoEmpledao()
 	{	
 		$this->Conexion=conectarBaseDatos();
-		$sentenciaSQL="update cargos_emplados set
+		$sentenciaSQL="UPDATE cargos_emplados SET
                             CARGO EMPLEADO ='$this->cargoEmpleado',
-                            where ID CARGOS = '$_POST[idCargoEmpleado]'";
+                            WHERE ID CARGOS = '$_POST[idCargoEmpleado]'";
 		$resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;

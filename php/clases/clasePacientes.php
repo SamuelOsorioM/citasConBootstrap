@@ -147,7 +147,7 @@ class Pacientes
     public function agregarPaciente()
     {
        $this->Conexion=conectarBaseDatos();
-       $sentenciaSQL="insert into pacientes(
+       $sentenciaSQL="INSERT INTO pacientes(
                                 CEDULA,
                                 PRIMER NOMBRE, 
                                 SEGUNDO NOMBRE,	
@@ -160,7 +160,7 @@ class Pacientes
                                 SEXO,
                                 CORREO ELECTRONICO,
                                 PASSWORD USUARIO)
-                 values('$this->cedulaPaciente',
+                 VALUES('$this->cedulaPaciente',
                         '$this->primerNombrePaciente',
                         '$this->segundoNombrePaciente',
                         '$this->primerApellidoPaciente',
@@ -180,7 +180,7 @@ class Pacientes
     public function consultarPaciente($cedulaPaciente)
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="select * from pacientes where CEDULA = '$cedulaPaciente'";
+        $sentenciaSQL="SELECT * FROM pacientes WHERE CEDULA = '$cedulaPaciente'";
         $resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -189,7 +189,7 @@ class Pacientes
     public function actualizarPaciente()
 	{	
 		$this->Conexion=conectarBaseDatos();
-		$sentenciaSQL="update pacientes set 
+		$sentenciaSQL="UPDATE pacientes SET 
                             PRIMER NOMBRE= '$this->primerNombrePaciente',
                             SEGUNDO NOMBRE= '$this->segundoNombrePaciente',
                             PRIMER APELLIDO='$this->primerApellidoPaciente',
@@ -200,7 +200,7 @@ class Pacientes
                             FECHA DE NACIMIENTO='$this->fechaDeNacimientoPaciente',
                             SEXO='$this->sexoPaciente',
                             CORREO ELECTRONICO='$this->correoElectronicoPaciente'         
-                            where CEDULA = '$_POST[cedulaPaciente]'";
+                            WHERE CEDULA = '$_POST[cedulaPaciente]'";
 		$resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;

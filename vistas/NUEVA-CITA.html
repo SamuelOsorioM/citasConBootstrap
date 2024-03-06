@@ -65,27 +65,34 @@
             
         </header>
 
-    <form class="formulario">
+    <form 
+    action="/php/controladores/validarInsertarCitasMedicas.php" 
+    method="post" 
+    enctype="text/plain" 
+    class="formulario">
         <div class="columna">
             <div class="formulario-bloque">
             
                 <div class="pregunta">
-                    <p>Tipo de Identificacion</p>
+                    <p>CODIGO CITA MEDICA</p>
                 </div>
                 <div class="respuesta">
-                    <input type="text" name="tipoIdentificacion">
+                    <input type="text" name="idCitaMedica" id="idCitaMedica" required >
                 </div>
+                
                 <div class="pregunta">
-                    <p>Identificacion</p>
+                    <p>CEDULA PACIENTE</p>
                 </div>
                 <div class="respuesta">
-                    <input type="text" name="Identificacion">
+                    <input type="text" name="cedulaPaciente" id="cedulaPaciente" required>
                 </div>
+                
                 <div class="pregunta">
                     <p>Especialidad</p>
                 </div>
+                
                 <div class="respuesta">
-                    <select name="Especialidad">
+                    <select name="especialidadMedica" id="especialidadMedica" required >
                     <option value="Medico General">Medico General</option>
                     <option value="Internista">Internista</option>
                     <option value="Pediatra">Pediatra</option>
@@ -93,55 +100,97 @@
                     </select>
 
                 </div>
+                
                 <div class="pregunta">
-                    <p>Seleccione Fecha</p>
+                    <p>MEDICO ESPECIALISTA</p>
                 </div>
+                
                 <div class="respuesta">
-                    <input type="date" name="fecha">
+                    <input type="text" name="identificacionMedico" id="identificacionMedico" required>
                 </div>
+                
                 <div class="pregunta">
-                    <p>Seleccione Hora de atencion</p>
+                    <p>SELECCIONE FECHA DE ATENCION</p>
                 </div>
-                <div class="hora">
-                    <input type="time" name="hora">
+                
+                <div class="respuesta">
+                    <input type="date" name="fechaCitaMedica" id="fechaCitaMedica" required>
                 </div>
 
+                <div class="pregunta">
+                    <p>SELECCIONE HORA DE ATENCION</p>
+                </div>
+                
+                <div class="respuesta">
+                    <input type="time" name="horaCitaMedica" id="horaCitaMedica" required>
+                </div>
 
-
+                <div class="pregunta">
+                    <p>ESTADO CITA MEDICA</p>
+                </div>
+                
+                <div class="respuesta">
+                    <input type="text" name="estadoCitaMedica" id="estadoCitaMedica" required>
+                </div>
             </div>
         </div>
 
         <div class="columna">
             <div class="formulario-bloque">
-                    <div class="pregunta">
-                    <p>Nombre Completo</p>
-                </div>
-                <div class="respuesta">
-                    <input type="text" name="Nombre Completo">
-                </div>
                 <div class="pregunta">
-                    <p>Telefono</p>
+                    <p>CONSULTORIO</p>
                 </div>
+                
                 <div class="respuesta">
-                    <input type="text" name="Telefono">
+                    <input type="text" name="identificacionConsultorio" id="identificacionConsultorio" required>
                 </div>
+                
                 <div class="pregunta">
-                    <p>Correo Electrónico</p>
+                    <p>PRIMER NOMBRE PACIENTE</p>
                 </div>
+                
                 <div class="respuesta">
-                    <input type="email" name="Correo Electrónico">
+                    <input type="text" name="primerNombrePaciente" id="primerNombrePaciente" required>
                 </div>
+                
                 <div class="pregunta">
-                    <p>Nombre Del Especialista</p>
+                    <p>SEGUNDO NOMBRE PACIENTE</p>
                 </div>
+                
                 <div class="respuesta">
-                    <input type="text" name="Nombre Del Especialista">
+                    <input type="text" name="segundoNombrePaciente" id="segundoNombrePaciente" required>
                 </div>
+                
                 <div class="pregunta">
-                    <p>consultorio</p>
+                    <p>PRIMER APELLIDO PACIENTE</p>
                 </div>
+                
                 <div class="respuesta">
-                    <input type="text" name="Consultorio">
+                    <input type="email" name="primerApellidoPaciente" id="primerApellidoPaciente" required>
+                </div>
+                
+                <div class="pregunta">
+                    <p>SEGUNDO APELLIDO PACIENTE</p>
+                </div>
+                
+                <div class="respuesta">
+                    <input type="text" name="segundoApellidoPaciente" id="segundoApellidoPaciente" required>
+                </div>
+                
+                <div class="pregunta">
+                    <p>CORREO ELECTRONICO PACIENTE</p>
+                </div>
+                
+                <div class="respuesta">
+                    <input type="text" name="correoElectronicoPaciente" id="correoElectronicoPaciente" required>
+                </div>
+
+                <div class="pregunta">
+                    <p>TELEFONO CELULAR PACIENTE</p>
+                </div>
+                
+                <div class="respuesta">
+                    <input type="text" name="telefonoCelularPaciente" id="telefonoCelularPaciente" required>
                 </div>
             </div>
         </div>

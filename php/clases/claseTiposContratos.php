@@ -51,10 +51,10 @@ class TiposContratos{
     public function agregarTipoContrato()
     {
        $this->Conexion=conectarBaseDatos();
-       $sentenciaSQL="insert into tipo_contrato(
+       $sentenciaSQL="INSERT INTO tipo_contrato(
                             ID TIPO CONTRATO,
                             TIPO DE CONTRATO)
-                    values(
+                    VALUES(
                         '$this->idTipoContrato';
                         '$this->tipoContrato')";
         $resultado=$this->Conexion->query($sentenciaSQL);
@@ -65,7 +65,7 @@ class TiposContratos{
     public function consultarTipoContrato($idTipoContrato)
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="select * from tipo_contrato where ID TIPO CONTRATO = '$idTipoContrato'";
+        $sentenciaSQL="SELECT * FROM tipo_contrato WHERE ID TIPO CONTRATO = '$idTipoContrato'";
         $resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -74,9 +74,9 @@ class TiposContratos{
     public function actualizarTipoContrato()
 	{	
 		$this->Conexion=conectarBaseDatos();
-		$sentenciaSQL="update tipo_contrato set
+		$sentenciaSQL="UPDATE tipo_contrato SET
                             TIPO DE CONTRATO ='$this->idTipoContrato',
-                            where ID TIPO CONTRATO = '$_POST[tipoContrato]'";
+                            WHERE ID TIPO CONTRATO = '$_POST[tipoContrato]'";
 		$resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -84,7 +84,4 @@ class TiposContratos{
     
     
 }
-
-
-
 ?>

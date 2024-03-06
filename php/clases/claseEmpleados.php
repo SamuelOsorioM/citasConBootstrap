@@ -184,7 +184,7 @@ class Empleados
     public function agregarEmpleado()
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="insert into pacientes empleados(
+        $sentenciaSQL="INSERT INTO  empleados(
                                             CEDULA_EMPLEADOS, 
                                             PRIMER_NOMBRE, 
                                             SEGUNDO_NOBRE, 
@@ -197,7 +197,7 @@ class Empleados
                                             tipo_contrato_ID TIPO CONTRATO, 
                                             ROL EN EL GESTOR_ID ROL EN EL GESTOR, 
                                             PASSWORD EMPLEADOS)
-                        values(
+                        VALUES(
                             '$this->cedulaEmpleados',
                             '$this->primerNombreEmpleado',
                             '$this->segundoNombreEmpleado',
@@ -220,7 +220,7 @@ class Empleados
     public function consultarEmpleado($cedulaEmpleados)
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="select * from empleados where CEDULA_EMPLEADOS = '$cedulaEmpleados'";
+        $sentenciaSQL="SELECT * FROM empleados WHERE CEDULA_EMPLEADOS = '$cedulaEmpleados'";
         $resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -229,7 +229,7 @@ class Empleados
     public function actualizarEmpleado()
 	{	
 		$this->Conexion=conectarBaseDatos();
-		$sentenciaSQL="update empleados set
+		$sentenciaSQL="UPDATE empleados SET
                                         PRIMER_NOMBRE ='$this->primerNombreEmpleado',
                                         SEGUNDO_NOBRE ='$this->segundoNombreEmpleado',
                                         PRIMER_APELLIDO ='$this->primerApellidoEmpleado',
@@ -241,7 +241,7 @@ class Empleados
                                         tipo_contrato_ID TIPO CONTRATO ='$this->idEspecilidadMedica',
                                         ROL EN EL GESTOR_ID ROL EN EL GESTOR ='$this->idTipoDeContraoEmpleado',
                                         PASSWORD EMPLEADOS='$this->idRolEmpleadoEnSoftware'
-                                        where CEDULA_EMPLEADOS='$_POST[cedulaEmpleados]'";  
+                            WHERE CEDULA_EMPLEADOS='$_POST[cedulaEmpleados]'";  
         $resultado=$this->Conexion->query($sentenciaSQL);
         $this->Conexion->close();
         return $resultado;

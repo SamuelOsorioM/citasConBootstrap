@@ -48,10 +48,10 @@ class RoleEmpleadoSoftaware{
     public function agregarRolEmpleado()
     {
        $this->Conexion=conectarBaseDatos();
-       $sentenciaSQL="insert into rol en el gestor(
+       $sentenciaSQL="INSERT INTO rol en el gestor(
                             ID ROL EN EL GESTOR,
                             TIPO DE ROL EN EL GESTOR)
-                    values(
+                    VALUES(
                         '$this->idRolEmpleadoEnSoftware';
                         '$this->tipoRolEmpleadoEnSoftware')";
         $resultado=$this->Conexion->query($sentenciaSQL);
@@ -62,7 +62,7 @@ class RoleEmpleadoSoftaware{
     public function consultarRolEmpleado($idRolEmpleadoEnSoftware)
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="select * from rol en el gestor where ID ROL EN EL GESTOR = '$idRolEmpleadoEnSoftware'";
+        $sentenciaSQL="SELECT * FROM rol en el gestor WHERE ID ROL EN EL GESTOR = '$idRolEmpleadoEnSoftware'";
         $resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -71,9 +71,9 @@ class RoleEmpleadoSoftaware{
     public function actualizarRolEmpleado()
 	{	
 		$this->Conexion=conectarBaseDatos();
-		$sentenciaSQL="update rol en el gestor set
+		$sentenciaSQL="UPDATE rol en el gestor SET
                             TIPO DE ROL EN EL GESTOR ='$this->tipoRolEmpleadoEnSoftware',
-                            where ID ROL EN EL GESTOR = '$_POST[idRolEmpleadoEnSoftware]'";
+                            WHERE ID ROL EN EL GESTOR = '$_POST[idRolEmpleadoEnSoftware]'";
 		$resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;

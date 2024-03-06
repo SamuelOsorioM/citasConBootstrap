@@ -5,19 +5,20 @@ require"/php/controladores/conectarBaseDatos.php";
 require"/php/clases/claseEmpleados.php";
 
 $nuevoEmpleado=New Empleados();
-//$nuevoPaciente->crearPaciente($_POST['cedulaPaciente'],
-  //                              $_POST['primerNombrePaciente'],
-    //                            $_POST['segundoNombrePaciente'],
-      //                          $_POST['primerApellidoPaciente'],
-        //                        $_POST['segundoApellidoPaciente'],
-          //                      $_POST['direccionPaciente'],
-            //                    $_POST['telefonoCelularPaciente'],
-              //                  $_POST['telefonoConvencionalPaciente'],
-                //                $_POST['fechaDeNacimientoPaciente'],
-                  //              $_POST['sexoPaciente'],
-//                                $_POST['correoElectronicoPaciente'],
-  //                              $_POST['password']);
-//$resultado=$nuevoPaciente->agregarPaciente();
+$nuevoEmpleado->crearEmpleado($_POST['cedulaEmpleados'],
+                                $_POST['primerNombreEmpleado'],
+                                $_POST['segundoNombreEmpleado'],
+                                $_POST['primerApellidoEmpleado'],
+                                $_POST['segundoApellidoEmpleado'],
+                                $_POST['direccionEmpleado'],
+                                $_POST['correoElectronicoEmpleado'],
+                                $_POST['telefonoCelularEmpleado'],
+                                $_POST['idCargoEmpleado'],
+                                $_POST['idEspecilidadMedica'],
+                                $_POST['idTipoDeContraoEmpleado'],
+                                $_POST['idRolEmpleadoEnSoftware'],
+                                $_POST['passwordEmpleado']);
+$resultado=$nuevoEmpleado->agregarEmpleado();
 
 //if($resultado)
 //    header("location:../vistas/CONFIRMACION-EMPLEADO-NUEVO.html");
