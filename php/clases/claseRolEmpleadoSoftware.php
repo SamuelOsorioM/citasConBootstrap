@@ -1,6 +1,6 @@
 <?php
 
-class RoleEmpleadoSoftaware{
+class RoleEmpleadoSoftware{
 
     //-----Definicion de atributos
     protected $idRolEmpleadoEnSoftware;
@@ -45,7 +45,7 @@ class RoleEmpleadoSoftaware{
 
     //4. Métodos Asociados al CRUD y Otros
 
-    public function agregarRolEmpleado()
+    public function agregarRolEmpleadoSoftware()
     {
        $this->Conexion=conectarBaseDatos();
        $sentenciaSQL="INSERT INTO rol en el gestor(

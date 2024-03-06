@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/style_NUEVA_CITA.css">
+<title>NUEVO-ROL-EMPLEADO-SoFTWARE</NUEVO-ROL-EMPLEADO-SFTWARE></title>
+</head>
+<body>
+<div class="head">    
+    <div class="logo-consultorio">
+        <img src="./img/logo_consultorio.jpeg" alt="Imagen en la esquina">
+    </div>
+    <div class="TITULOS-APP">   
+        <h1>CONSULTORIO MEDICO DE ESPECIALISTAS</h1>
+        <h2>SISTEMA VIRTUAL DE CITAS</h2>
+    </div>
+</div>
+   
+    <header>
+        <nav>
+            <label for="show-menu" class="show-menu">MENU</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul class="menu-app" id="menu">
+                <li><a href="NUEVA-CITA.html">NUEVA CITA</a></li>
+                <li><a href="ANULAR CITA.html">ANULAR CITA</a></li>
+                <li><a href="ATENCION-MEDICA.html">ATENCION MEDICA</a></li>
+                    <li>
+                        <a href="#">MAESTROS</a>
+                        <ul class="submenu"> 
+                            <li><a href="PACIENTE-NUEVO.html">NUEVO PACIENTE</a></li>
+                            <li><a href="NUEVA-CITA.html">NUEVA CITA MEDICA</a></li>
+                            <li><a href="NUEVO-CONUSULTORIO.html">NUEVO CONSULTORIO</a></li>
+                            <li><a href="NUEVO-MEDICAMENTO.html">NUEVO MEDICAMENTO</a></li>
+                                <li>
+                                    <a href="#">--GESTION EMPLEADOS--</a>
+                                    <ul class="submenu">
+                                    <li><a href="EMPLEADO-NUEVO.html">NUEVO EMPLEADO</a></li>
+                                    <li><a href="NUEVO-CARGO-EMPLEADOS.html">NUEVO CARGO/EMPLEADO</a></li>
+                                    <li><a href="NUEVO-TIPO-CONTRATO.html">NUEVO TIPO CONTRATO/EMPLEADO</a></li>
+                                    <li><a href="NUEVO-ROL-EMPLEADO-SOFTWARE.html">NUEVO ROL EN SOFTWARE</a></li>
+                                    
+                                    </ul>
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">CONSULTAS</a>
+                        <ul class="submenu" > 
+                            <li><a href="#">CONSULTA EMPLEADOS</a></li>
+                            <li><a href="#">CONSULTA CONSULTORIOS</a></li>
+                            <li><a href="#">CONSULTA MEDICAMENTOS</a></li>
+                        </ul>
+                    </li>
+                <li><a href="../index.html">SALIR</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <div class="titulo-app">  
+            <div class="box-cita-nueva">
+            <H4>CREAR NUEVO ROL SOFTWARE</H4>
+            </div>
+         </div>
+        
+    </header>
+
+<form action="/php/controladores/validarRolEmpleadoSoftware.php" 
+method="post" 
+enctype="text/plain" 
+class="formulario">
+    <div class="columna">
+        <div class="formulario-bloque">
+        
+            <div class="pregunta">
+                <p>IDENTIFICACION ROL SOFTWARE</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="idRolEmpleadoSoftware" id="idRolEmpleadoSoftware" required>
+            </div>
+            
+            <div class="pregunta">
+                <p>ROL SOFTWARE</p>
+            </div>
+            
+            <div class="respuesta">
+                <input type="text" name="tipoRolEmpleadoEnSoftware" id="tipoRolEmpleadoEnSoftware" required>
+            </div>
+        </div>   
+    </div>
+</form>
+      <button type="submit" class="guardar"><a href="CONFIRMACION-NUEVO-CONSULTORIO.html">CREAR NUEVO CONSULTORIO</a></button>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>
