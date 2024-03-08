@@ -44,102 +44,102 @@ class Pacientes
     //2.Metodo get (metodo accesor-consultores) 
     public function getCedulaPaciente()
         {
-        return $this->cedulaPaciente;
+        return ($this->cedulaPaciente);
         }
     public function getPrimerNombrePaciente()
         {
-        return $this->primerNombrePaciente;
+        return ($this->primerNombrePaciente);
         }
     public function getCegundoNombrePaciente()
         {
-        return $this->segundoNombrePaciente;
+        return ($this->segundoNombrePaciente);
         }
     public function getCrimerApellidoPaciente()
         {
-        return $this->primerApellidoPaciente;
+        return ($this->primerApellidoPaciente);
         }
     public function getCegundoApellidoPaciente()
         {
-        return $this->segundoApellidoPaciente;
+        return ($this->segundoApellidoPaciente);
         }
     public function getCireccionPaciente()
         {
-        return $this->direccionPaciente;
+        return ($this->direccionPaciente);
         }
     public function getCelefonoCelularPaciente()
         {
-        return $this->telefonoCelularPaciente;
+        return ($this->telefonoCelularPaciente);
         }
     public function getCelefonoConvencionalPaciente()
         {
-        return $this->telefonoConvencionalPaciente;
+        return ($this->telefonoConvencionalPaciente);
         }
     public function getCechaDeNacimientoPaciente()
         {
-        return $this->fechaDeNacimientoPaciente;
+        return ($this->fechaDeNacimientoPaciente);
         }
     public function getCexoPaciente()
         {
-        return $this->sexoPaciente;
+        return ($this->sexoPaciente);
         }
     public function getCorreoElectronicoPaciente()
         {
-        return $this->correoElectronicoPaciente;
+        return ($this->correoElectronicoPaciente);
         }
     public function getpassword()
         {
-        return $this->password;
+        return ($this->password);
         }
 
     //3. Metodo set (metodo modificador-fijadores)
     
     public function setCedulaPaciente($cedulaPaciente)
         {
-        $this->$cedulaPaciente;
+        $this->cedulaPaciente=$cedulaPaciente;
         }
     public function setPrimerNombrePaciente($primerNombrePaciente)
         {
-        $this->$primerNombrePaciente;
+        $this->primerNombrePaciente=$primerNombrePaciente;
         }
     public function setSegundoNombrePaciente($segundoNombrePaciente)
         {
-        $this->$segundoNombrePaciente;
+        $this->segundoNombrePaciente=$segundoNombrePaciente;
         }
     public function setPrimerApellidoPaciente($primerApellidoPaciente)
         {
-        $this->$primerApellidoPaciente;
+        $this->primerApellidoPaciente=$primerApellidoPaciente;
         }
     public function setSegundoApellidoPaciente($segundoApellidoPaciente)
         {
-        $this->$segundoApellidoPaciente;
+        $this->segundoApellidoPaciente=$segundoApellidoPaciente;
         }
     public function setDireccionPaciente($direccionPaciente)
         {
-        $this->$direccionPaciente;
+        $this->direccionPaciente=$direccionPaciente;
         }
     public function setTelefonoCelularPaciente($telefonoCelularPaciente)
         {
-        $this->$telefonoCelularPaciente;
+        $this->telefonoCelularPaciente=$telefonoCelularPaciente;
         }
     public function setTelefonoConvencionalPaciente($telefonoConvencionalPaciente)
         {
-        $this->$telefonoConvencionalPaciente;
+        $this->telefonoConvencionalPaciente=$telefonoConvencionalPaciente;
         }
     public function setFechaDeNacimientoPaciente($fechaDeNacimientoPaciente)
         {
-        $this->$fechaDeNacimientoPaciente;
+        $this->fechaDeNacimientoPaciente=$fechaDeNacimientoPaciente;
         }
     public function setSexoPaciente($sexoPaciente)
         {
-        $this->$sexoPaciente;
+        $this->sexoPaciente=$sexoPaciente;
         }
     public function setCorreoElectronicoPaciente($correoElectronicoPaciente)
         {
-        $this->$correoElectronicoPaciente;
+        $this->correoElectronicoPaciente=$correoElectronicoPaciente;
         }
     public function setpassword($password)
         {
-        $this->$password;
+        $this->password=$password;
         }
     
     //4. Métodos Asociados al CRUD y Otros

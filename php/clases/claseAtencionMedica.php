@@ -9,6 +9,7 @@ class AtencionMedica
     protected $idDiagnostico;
     protected $idMedicamentos;
     protected $psologia;
+    protected $observacionesMedico;
     protected $Conexion;
     
     //------Fin Definicion de atributos-------
@@ -17,7 +18,8 @@ class AtencionMedica
 
     //1.Metodo constructor
     public function crearAtencionMedica($idAtencionMedica, $idCitaMedica, $sintomas, 
-                                        $idDiagnostico, $idMedicamentos, $psologia, )
+                                        $idDiagnostico, $idMedicamentos, $psologia, 
+                                        $observacioesMedico)
     {
     $this->idAtencionMedica=$idAtencionMedica;
     $this->idCitaMedica=$idCitaMedica;
@@ -25,6 +27,7 @@ class AtencionMedica
     $this->idDiagnostico=$idDiagnostico;
     $this->idMedicamentos=$idMedicamentos;
     $this->psologia=$psologia;
+    $this->observacionesMedico;
     }
     
      //---fin metodo constructor
@@ -33,55 +36,62 @@ class AtencionMedica
 
     public function getidAtencionMedica()
         {
-        return $this->idAtencionMedica;
+        return ($this->idAtencionMedica);
         }
     public function getidCitaMedica()
         {
-        return $this->idCitaMedica;
+        return ($this->idCitaMedica);
         }
     public function getsintomas()
         {
-        return $this->sintomas;
+        return ($this->sintomas);
         }
     public function getidDiagnostico()
         {
-        return $this->idDiagnostico;
+        return ($this->idDiagnostico);
         }
     public function getidMedicamentos()
         {
-        return $this->idMedicamentos;
+        return ($this->idMedicamentos);
         }
     public function getpsologia()
         {
-        return $this->psologia;
+        return ($this->psologia);
         }
-
+    public function getObservacionesMedico()
+        {
+            return ($this->observacionesMedico);
+        }
 
     //3. Metodo set (metodo modificador-fijadores)
 
     public function setidAtencionMedica($idAtencionMedica)
         {
-        $this->$idAtencionMedica;
+        $this->idAtencionMedica=$idAtencionMedica;
         }
     public function setidCitaMedica($idCitaMedica)
         {
-        $this->$idCitaMedica;
+        $this->idCitaMedica=$idCitaMedica;
         }
     public function setsintomas($sintomas)
         {
-        $this->$sintomas;
+        $this->sintomas=$sintomas;
         }
     public function setidDiagnostico($idDiagnostico)
         {
-        $this->$idDiagnostico;
+        $this->idDiagnostico=$idDiagnostico;
         }
     public function setidMedicamentos($idMedicamentos)
         {
-        $this->$idMedicamentos;
+        $this->idMedicamentos=$idMedicamentos;
         }
     public function setpsologia($psologia)
         {
-        $this->$psologia;
+        $this->psologia=$psologia;
+        }
+    public function setObservacionesMedico($observacionesMedico)
+        {
+        $this->observacionesMedico=$observacionesMedico;
         }
 
     
@@ -89,20 +99,22 @@ class AtencionMedica
     public function agregarAtencionMedica()
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="insert into atencion_medica(
+        $sentenciaSQL="INSERT INTO atencion_medica(
                                             idTRATAMIENTOS, 
                                             idCitaMedica, 
                                             SINTOMAS, 
                                             DIAGNOSTICO, 
                                             MEDICAMENTO, 
-                                            Psologia)
-                        values(
+                                            Psologia,
+                                            OBSERVACIONES ESPECIALISTA)
+                        VALUES(
                                 '$this->idAtencionMedica'
                                 '$this->idCitaMedica'
                                 '$this->sintomas'
                                 '$this->idDiagnostico'
                                 '$this->idMedicamentos'
-                                '$this->psologia')";
+                                '$this->psologia'
+                                '$this->observacionesMedico')";
         $resultado=$this->Conexion->query($sentenciaSQL);
         $this->Conexion->close();
         return $resultado;
@@ -111,7 +123,7 @@ class AtencionMedica
     public function consultarAtencionMedica($idAtencionMedica)
     {
         $this->Conexion=conectarBaseDatos();
-        $sentenciaSQL="select * from atencion_medica where idTRATAMIENTOS = '$idAtencionMedica'";
+        $sentenciaSQL="SELECT * FROM atencion_medica WHERE idTRATAMIENTOS = '$idAtencionMedica'";
         $resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
@@ -120,13 +132,14 @@ class AtencionMedica
     public function actualizarAtencionMedica()
 	{	
 		$this->Conexion=conectarBaseDatos();
-		$sentenciaSQL="update atencion_medica set
+		$sentenciaSQL="UPDATE atencion_medica SET
                                 idCitaMedica='$this->idCitaMedica',
                                 SINTOMAS='$this->sintomas', 
                                 DIAGNOSTICO='$this->idDiagnostico', 
                                 MEDICAMENTO='$this->idMedicamentos', 
                                 Psologia='$this->psologia',
-                            where idTRATAMIENTOS = '$_POST[idAtencionMedica]'";
+                                OBSERVACIONES ESPECIALISTA='$this->observacionesMedico'
+                            WHERE idTRATAMIENTOS = '$_POST[idAtencionMedica]'";
 		$resultado=$this->Conexion->query($sentenciaSQL);
 		$this->Conexion->close();
 		return $resultado;
